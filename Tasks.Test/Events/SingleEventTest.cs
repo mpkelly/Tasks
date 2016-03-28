@@ -8,7 +8,7 @@ namespace Tasks.Test.Events
     public class SingleEventTest : AbstractEventTest
     {
         [Test]
-        public void occurs_on_date_when_input_datetime_matches()
+        public void single_event_when_input_date_matches()
         {
             var singleEvent = new SingleEvent(SevenAmOnBoxingDay2015);
 
@@ -16,7 +16,7 @@ namespace Tasks.Test.Events
         }
 
         [Test]
-        public void occurs_on_date_when_input_datetime_does_not_match()
+        public void single_event_when_input_date_does_not_match()
         {
             var singleEvent = new SingleEvent(SevenAmOnBoxingDay2015);
 
