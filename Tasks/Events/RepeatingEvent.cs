@@ -4,11 +4,6 @@ namespace Tasks.Events
 {
     public abstract class RepeatingEvent : Event
     {
-        public RepeatingEvent()
-        {
-            
-        }
-
         protected RepeatingEvent(DateTime startTime, DateTime endTime)
         {
             StartTime = startTime;
@@ -24,11 +19,11 @@ namespace Tasks.Events
             return IsInPeriod(date) && IsOnDay(date);
         }
 
-        protected abstract bool IsOnDay(DateTime time);
-
         protected bool IsInPeriod(DateTime date)
         {
             return StartTime.Date <= date.Date && EndTime.Date >= date;
         }
+
+        protected abstract bool IsOnDay(DateTime time);
     }
 }

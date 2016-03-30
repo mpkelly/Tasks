@@ -17,7 +17,6 @@ namespace Tasks.Events
         }
     }
 
-
     //A bridge to C#'s DayOfWeek class that allows for bitwise operations and also allows 
     //for storing multiple days as a single value, avoiding 1-n relationships that aren't supported by SQLIte.NET
     [Flags]
